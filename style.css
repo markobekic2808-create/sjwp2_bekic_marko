@@ -1,0 +1,131 @@
+/* ===== Osnovne postavke ===== */
+:root {
+  --papir: #f6f3ec;
+  --tinta: #1f2937;
+  --tinta-svijetla: #4b5563;
+  --naglasak: #b3452c;
+  --linija: #d8d2c2;
+  --kartica-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--papir);
+  color: var(--tinta);
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/* ===== Hero / naslovna sekcija ===== */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  border-bottom: 2px solid var(--linija);
+}
+
+.hero-label {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.85rem;
+  color: var(--naglasak);
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--tinta);
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  font-family: "Trebuchet MS", sans-serif;
+  color: var(--tinta-svijetla);
+  font-size: 1.05rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== Sekcija sa zadaćama ===== */
+.zadace {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.kartica {
+  background: var(--kartica-bg);
+  border: 1px solid var(--linija);
+  border-left: 4px solid var(--naglasak);
+  padding: 30px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kartica:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.broj {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.8rem;
+  color: var(--naglasak);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.kartica h2 {
+  font-size: 1.4rem;
+  margin: 10px 0 12px;
+  color: var(--tinta);
+}
+
+.kartica p {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.95rem;
+  color: var(--tinta-svijetla);
+  margin-bottom: 18px;
+}
+
+.link {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.9rem;
+  color: var(--naglasak);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Podnožje ===== */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.85rem;
+  color: var(--tinta-svijetla);
+  border-top: 2px solid var(--linija);
+}
+
+/* ===== Responzivnost za mobitele ===== */
+@media (max-width: 700px) {
+  .zadace {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+}
