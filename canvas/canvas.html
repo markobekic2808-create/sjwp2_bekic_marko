@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="600"
+      height="600"
+      style="border: 1px solid black"
+    ></canvas>
+
+    <script>
+      let c = document.getElementById("myCanvas");
+      let ctx = c.getContext("2d");
+
+      //pravokutnik
+      ctx.beginPath();
+      ctx.rect(10, 10, 400, 400);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+
+      //krug
+      ctx.beginPath();
+      ctx.arc(200, 300, 100, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      //lajne
+      ctx.moveTo(100, 200);
+      ctx.lineTo(200, 300);
+      ctx.lineTo(50, 300);
+      ctx.lineTo(100, 200);
+      ctx.stroke();
+    </script>
+
+    <canvas
+      id="myCanvas1"
+      width="600"
+      height="600"
+      style="border: 1px solid black"
+    ></canvas>
+
+    <script>
+      let c1 = document.getElementById("myCanvas1");
+      let ctx1 = c1.getContext("2d");
+
+      //pravokutnik
+      ctx1.beginPath();
+      ctx1.rect(10, 300, 400, 200);
+      ctx1.fillStyle = "blue";
+      ctx1.fill();
+
+      ctx1.beginPath();
+      ctx1.rect(30, 350, 100, 150);
+      ctx1.fillStyle = "lightblue";
+      ctx1.fill();
+
+      ctx1.beginPath();
+      ctx1.rect(200, 350, 150, 100);
+      ctx1.fillStyle = "lightblue";
+      ctx1.fill();
+
+      ctx1.beginPath();
+      ctx1.moveTo(10, 300);
+      ctx1.lineTo(220, 200);
+      ctx1.lineTo(410, 300);
+      ctx1.fillStyle = "red";
+      ctx1.fill();
+    </script>
+  </body>
+</html>
