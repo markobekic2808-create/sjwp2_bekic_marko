@@ -52,3 +52,26 @@ ul li a:hover:not(.active) {
 ul li a.active {
   background-color: #04aa6d;
 }
+
+form { max-width: 400px; }
+
+label { display: block; margin-top: 10px; }
+
+input{
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+button{
+  
+  background-color: #C2F8F7;
+  width: 100%;
+  
+
+}
+
+
+
+
